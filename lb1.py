@@ -73,9 +73,16 @@ def floatToBinary(number, places =4):
     res += remainderToBinary(remainder, places)
     return res;
 
+def floatToNotation(number):
+    degree = 0;
+    while(number>9):
+        number/=10;
+        degree+=1;
+    return str(number)+"*10^"+str(degree);
 
 print(toBinary(531))
 print(toOctal(531))
 print(toHexademical(3256))
 print(toHexademical(-3657))
 print(floatToBinary(698.412, 9))
+print(floatToNotation(698.412))
